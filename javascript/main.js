@@ -25,8 +25,8 @@ function selectChannel(button, channel) {
 
 function enterSite(self) {
     drawChannelButtons();
-    $(self).parent().fadeOut(5000);
-	$('#splashtitle').fadeOut(5000);
+    $(self).parent().fadeOut(2500);
+	$('#splashtitle').fadeOut(2500);
     Player.change_channel(-1);
 
     $(document).keydown(function(e) {
