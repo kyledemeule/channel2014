@@ -1,0 +1,303 @@
+html,
+body {
+    padding:0;
+    margin:0;
+    width:100%;
+    height:100%;
+	background: #000;
+}
+
+html {
+    font-family: Helvetica, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+
+video { 
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+   background: #000000; 
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+h1 {
+    clear: both;
+	color: #FFFFFF;
+    text-align: center;
+    display: block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    top: 10%;
+    
+	
+}
+
+#JoinButton {
+	position: absolute;
+	left: 40%;
+	right: 40%;
+    border-radius: 100em;
+    margin-top: 200px;
+	margin-right: auto;
+	margin-left: auto; 
+    border-top: 2px #FFF solid;
+    border-bottom: 2px #FFF solid;
+    padding: 30px;
+	background-color: #333;
+    opacity: 0.75;
+    filter: alpha(opacity=75);
+}
+
+.share-buttons{
+	list-style: none;
+}
+
+
+
+.share-buttons li{
+	display: inline;
+}
+
+bio,
+social_twitter,
+social_facebook,
+apple {
+    font-family: monaco;
+    font-size: 9px;
+    color: #000000;
+    position: relative;
+    top: 5px;
+    margin: 0 0 0 5px;
+    height: 20px;
+}
+
+bio {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    overflow: visible;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+social_twitter,
+social_facebook,
+apple {
+    font-size: 10px;
+    text-align: left;
+    float: left;
+}
+
+social_twitter {
+    width: 100px;
+}
+
+#hideaway {
+    display:none;
+    border:0px;
+    margin:0px;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 320px;
+    text-align: left;
+}
+
+@media only screen and (max-width : 1000px) {
+    h1 {
+        text-align: center;
+    }
+    #MessagePrefix,
+    #MessagePostfix {
+        display: block;
+        width: 100%;
+        text-align:center;
+        margin: 10px 0 5px 0;
+    }
+    #JoinButton { display: inline-block; }
+}
+
+@media only screen
+and (max-width : 600px) {
+    #MessagePrefix,
+    #MessagePostfix {
+        font-size: .7em;
+    }
+    #MessagePrefix,
+    #MessagePostfix,
+    #JoinButton {
+        display: block;
+        text-align:center;
+    }
+}
+
+@media only screen
+and (max-width : 400px) {
+    #AboutButton span { display: none; }
+    #hideaway { width: auto; padding: 0; margin: 0; }
+    #AboutContent { width: inherit; border: none; border-bottom: 1px solid #fff;  }
+}
+
+@media only screen
+and (max-device-width : 800px) {
+    html,
+    body {
+        height:95%;
+    }
+}
+
+/* all new styles after this point */
+
+#splashtitle{
+    position: absolute;
+	width: 306px;
+	height: 155px;
+	left: 0;
+	right: 0;
+	background-image: url("https://s3.amazonaws.com/thirtysecondstories.com/images/title.gif");
+	background-repeat: no-repeat;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	margin-bottom: 0px;
+
+	
+}
+
+
+#info-btn {
+    width: 38px;
+    height: 37px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 9;
+    top: 16px;
+    right: 16px;
+    background: url("https://s3.amazonaws.com/thirtysecondstories.com/images/info_buttons2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#info-btn:hover {
+    background-position: 0 -76px;
+}
+#info-btn.show {
+    background-position: 0 -38px;
+}
+#info-overlay { /* lex made some changes here */
+    
+    display: none;
+    background: #FFF;
+    width: 70%;
+    height: 80%;
+	top:10%;
+	bottom:10%;
+    left: 15%;
+	right: 15%;
+    position: absolute;
+    z-index: 6;
+    text-align: left;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+	border: 2px solid;
+    border-radius: 30px;
+}
+#info-overlay.show {
+    display: block;
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+#info-overlay #text {
+    position: absolute;
+    width: 60%;
+	height: 80%;
+    display: table;
+    top: 10%;
+    left: 20%;
+	right: 20%;
+	bottom: 10%;
+}
+
+
+#social {
+   position: absolute;
+    left: 5%;
+    bottom: 300px;
+        height: 40px;
+		z-index: 205;
+		 opacity: 1.0;
+    filter: alpha(opacity=100);
+  
+}
+
+
+
+#channel-buttons {
+    font-size: 12pt;
+    position: absolute;
+    right: 16px;
+    top: 48px;
+    margin: 0;
+}
+
+#channel-buttons li {
+    text-align: center;
+    list-style-type: none;
+    font-weight: bold;
+    background-color: #FFFFFF;
+	opacity: 0.7;
+    height: 20px;
+    width: 100px;
+    padding: 10px;
+    margin: 0px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+#channel-buttons li:hover {
+    background-color: #eee;
+    border-radius: 50px;
+}
+#channel-buttons li.selected {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+}
+a:link      {text-decoration: none; color: #000}
+a:visited   {text-decoration: none; color: #000}
+a:hover         {text-decoration: none; color: #000}
+a:active    {text-decoration: none; color: #000}
+
+#info-overlay a:link        {text-decoration: none; color: #039}
+#info-overlay a:visited     {text-decoration: none; color: #039}
+#info-overlay a:hover       {text-decoration: none; color: #039}
+#info-overlay a:active      {text-decoration: none; color: #039}
+
+#channel-buttons li.selected a:link         {text-decoration: none; color: #fff}
+#channel-buttons li.selected a:visited  {text-decoration: none; color: #fff}
+#channel-buttons li.selected a:hover        {text-decoration: none; color: #fff}
+#channel-buttons li.selected a:active       {text-decoration: none; color: #fff}
