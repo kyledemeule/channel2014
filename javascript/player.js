@@ -16,10 +16,6 @@ Player.switch_media = function(){
 
 Player.prepare_video_list = function() {
     var possible_media = Player.get_possible_media("videos");
-    //turn them into URLs
-    for(var index = 0; index < possible_media.length; index++) {
-        possible_media[index] = Config.base_asset_path + Config.video_path + possible_media[index];
-    }
     shuffle_array(possible_media);
     this.on_deck_videos = possible_media;
 }
@@ -33,9 +29,16 @@ Player.switch_media_lazy = function(video_url) {
     temp_video.src = video_url;
 }
 
-Player.switch_video = function(video_url) {
-    var temp_video = document.getElementById("bgvideo");
-    temp_video.src = video_url;
+Player.switch_video = function(video_files) {
+    var base_path = Config.base_asset_path + Config.video_path;
+    var video_element = document.getElementById("bgvideo");
+    if(Modernizr.video && Modernizr.video.h264) {
+        video_element.setAttribute("src", base_path + video_files.h264);
+    } else if(Modernizr.video && Modernizr.video.webm) {
+        video_element.setAttribute("src", base_path + video_files.webm);
+    } else if(Modernizr.video && Modernizr.video.ogg) {
+        video_element.setAttribute("src", base_path + video_files.ogg);
+    }
 }
 
 Player.toggle_video = function() {
