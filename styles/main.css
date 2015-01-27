@@ -53,20 +53,25 @@ h1 {
 	
 }
 
+#intro {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
 #JoinButton {
-	position: absolute;
-	left: 40%;
-	right: 40%;
+    margin-top: 40px;
+}
+
+#JoinButton span {
     border-radius: 100em;
-    margin-top: 200px;
-	margin-right: auto;
-	margin-left: auto; 
     border-top: 2px #FFF solid;
     border-bottom: 2px #FFF solid;
-    padding: 30px;
+    padding: 30px 7%;
 	background-color: #333;
     opacity: 0.75;
     filter: alpha(opacity=75);
+    max-width: 120px;
 }
 
 .share-buttons{
@@ -137,7 +142,6 @@ social_twitter {
         text-align:center;
         margin: 10px 0 5px 0;
     }
-    #JoinButton { display: inline-block; }
 }
 
 @media only screen
@@ -147,8 +151,7 @@ and (max-width : 600px) {
         font-size: .7em;
     }
     #MessagePrefix,
-    #MessagePostfix,
-    #JoinButton {
+    #MessagePostfix{
         display: block;
         text-align:center;
     }
@@ -171,21 +174,6 @@ and (max-device-width : 800px) {
 
 /* all new styles after this point */
 
-#splashtitle{
-    position: absolute;
-	width: 306px;
-	height: 155px;
-	left: 0;
-	right: 0;
-	background-image: url("https://s3.amazonaws.com/thirtysecondstories.com/images/title.gif");
-	background-repeat: no-repeat;
-    margin-left: auto;
-	margin-right: auto;
-	margin-top: 100px;
-	margin-bottom: 0px;
-
-	
-}
 
 
 #info-btn {
