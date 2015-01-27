@@ -228,6 +228,12 @@ and (max-device-width : 800px) {
     left: 20%;
 	right: 20%;
 	bottom: 10%;
+    overflow-y: scroll;
+    font-family: : "Helvetica";
+}
+
+#info-overlay #text h3 {
+    color: #4c4947;
 }
 
 
