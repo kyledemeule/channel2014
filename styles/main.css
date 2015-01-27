@@ -213,6 +213,7 @@ and (max-device-width : 800px) {
     transition: opacity 0.2s ease-out;
 	border: 2px solid;
     border-radius: 30px;
+    overflow-y: auto;
 }
 #info-overlay.show {
     display: block;
@@ -228,7 +229,6 @@ and (max-device-width : 800px) {
     left: 20%;
 	right: 20%;
 	bottom: 10%;
-    overflow-y: scroll;
     font-family: : "Helvetica";
 }
 
