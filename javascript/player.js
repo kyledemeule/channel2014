@@ -39,6 +39,7 @@ Player.switch_video = function(video_files) {
     } else if(Modernizr.video && Modernizr.video.ogg) {
         video_element.setAttribute("src", base_path + video_files.ogg);
     }
+    video_element.play();
 }
 
 Player.toggle_video = function() {
